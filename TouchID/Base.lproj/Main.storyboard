@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RHd-Jh-jVP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Touch iD-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,141 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AX-GM-CbC">
+                                <rect key="frame" x="0.0" y="84" width="375" height="24"/>
+                                <fontDescription key="fontDescription" name="Courier-BoldOblique" family="Courier" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSK-3k-QJA">
+                                <rect key="frame" x="0.0" y="123" width="375" height="27.5"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="touch-id-icon" translatesAutoresizingMaskIntoConstraints="NO" id="n3c-D0-2hl">
+                                <rect key="frame" x="15" y="180.5" width="345" height="436.5"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="4AX-GM-CbC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CVZ-E6-y1q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n3c-D0-2hl" secondAttribute="bottom" constant="50" id="F2T-DK-WQZ"/>
+                            <constraint firstItem="4AX-GM-CbC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Goy-JE-s3r"/>
+                            <constraint firstItem="n3c-D0-2hl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Hgo-y1-ywp"/>
+                            <constraint firstAttribute="trailing" secondItem="bSK-3k-QJA" secondAttribute="trailing" id="ScX-ra-4Mv"/>
+                            <constraint firstItem="bSK-3k-QJA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TfY-Fm-ofX"/>
+                            <constraint firstItem="bSK-3k-QJA" firstAttribute="top" secondItem="4AX-GM-CbC" secondAttribute="bottom" constant="15" id="ZYa-sB-J7F"/>
+                            <constraint firstItem="n3c-D0-2hl" firstAttribute="top" secondItem="bSK-3k-QJA" secondAttribute="bottom" constant="30" id="aJu-xF-s9I"/>
+                            <constraint firstAttribute="trailing" secondItem="n3c-D0-2hl" secondAttribute="trailing" constant="15" id="c1n-si-RhT"/>
+                            <constraint firstAttribute="trailing" secondItem="4AX-GM-CbC" secondAttribute="trailing" id="y1i-8Z-9Q1"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jP9-qJ-6oU" appends="YES" id="lrj-83-yfL"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Touch iD" id="1Gq-iw-GlT"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="4AX-GM-CbC" id="b8s-aX-z7S"/>
+                        <outlet property="hourLabel" destination="bSK-3k-QJA" id="YLR-uz-v6w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jP9-qJ-6oU">
+                    <connections>
+                        <action selector="registerTouch:" destination="BYZ-38-t0r" id="tcp-w6-luS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="954" y="-544"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="4gf-rm-4lQ">
+            <objects>
+                <viewController storyboardIdentifier="SecondView" id="t23-Ya-GhI" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWO-9V-cYD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dl0-j5-Erg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8sn-eE-GnD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch iD success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtA-kS-UIB">
+                                <rect key="frame" x="0.0" y="38" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="38K-UU-oA1">
+                                <rect key="frame" x="8" y="79" width="359" height="513"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text"> Framework
+ LocalAuthentication
+ Request authentication from users through passphrases or biometrics.
+ 
+ Overview
+ The Local Authentication framework provides facilities for requesting authentication from users with specified security policies.
+ The localized string you present to the user should provide a clear reason for why you are requesting they authenticate themselves, and what action you will be taking based on that authentication.
+ 
+
+ Classes
+ LAContext
+ An LAContext object represents an authentication context. The LAContext class provides a programmatic interface for evaluating authentication policies and access controls, managing credentials, and invalidating authentication contexts.
+
+ More info: https://developer.apple.com/reference/localauthentication?language=objc</mutableString>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwu-u0-icz">
+                                <rect key="frame" x="145" y="622" width="84" height="30"/>
+                                <state key="normal" title="Ok, entendi!"/>
+                                <connections>
+                                    <action selector="returnView:" destination="t23-Ya-GhI" eventType="touchUpInside" id="CdS-sU-ILh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="38K-UU-oA1" firstAttribute="top" secondItem="BtA-kS-UIB" secondAttribute="bottom" constant="20" id="4jK-n0-4ui"/>
+                            <constraint firstAttribute="trailing" secondItem="BtA-kS-UIB" secondAttribute="trailing" id="HiG-Zj-sZL"/>
+                            <constraint firstItem="BtA-kS-UIB" firstAttribute="top" secondItem="PWO-9V-cYD" secondAttribute="bottom" constant="18" id="UUK-2d-SwS"/>
+                            <constraint firstItem="fwu-u0-icz" firstAttribute="centerX" secondItem="8sn-eE-GnD" secondAttribute="centerX" id="UfA-MK-wU0"/>
+                            <constraint firstItem="38K-UU-oA1" firstAttribute="leading" secondItem="8sn-eE-GnD" secondAttribute="leading" constant="8" id="WOU-GE-9B3"/>
+                            <constraint firstAttribute="trailing" secondItem="38K-UU-oA1" secondAttribute="trailing" constant="8" id="bMy-E9-MuQ"/>
+                            <constraint firstItem="Dl0-j5-Erg" firstAttribute="top" secondItem="fwu-u0-icz" secondAttribute="bottom" constant="15" id="d0w-e6-dHk"/>
+                            <constraint firstItem="fwu-u0-icz" firstAttribute="top" secondItem="38K-UU-oA1" secondAttribute="bottom" constant="30" id="lhx-ha-IF3"/>
+                            <constraint firstItem="BtA-kS-UIB" firstAttribute="leading" secondItem="8sn-eE-GnD" secondAttribute="leading" id="n4l-xD-ywA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IpY-d7-Ogl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656" y="-541"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HYU-yT-P4H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RHd-Jh-jVP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KWM-Pd-IZd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KQM-MZ-wKt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZT-IL-Ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="-543.77811094452773"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="touch-id-icon" width="180" height="180"/>
+    </resources>
 </document>

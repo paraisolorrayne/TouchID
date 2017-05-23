@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SecondViewController.h
 //  TouchID
 //
 //  Created by Zup Beta on 23/05/17.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <LocalAuthentication/LocalAuthentication.h>
 
-@interface ViewController : UIViewController
-
+@interface SecondViewController : UIViewController
 
 @end
-
